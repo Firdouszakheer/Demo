@@ -2,8 +2,7 @@ name: Sync to Hugging Face Space
 
 on:
   push:
-    branches: 
-    - New 
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -22,4 +21,4 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git remote add space https://oauth2:$HF_TOKEN@huggingface.co/spaces/firdouszakheer/Demo
-          git push space New:main --force
+          git push space main --force
